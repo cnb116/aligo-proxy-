@@ -11,12 +11,12 @@ app.post('/', async (req, res) => {
 
     const response = await axios.post('https://apis.aligo.in/send/', null, {
       params: {
-        key: 'API_KEY',
-        user_id: 'USER_ID',
-        sender: '발신번호',
+        key: 'is02m5kx6deb2ohhnwof43vg6ek29vf1',
+        user_id: 'cnb116',
+        sender: '010-5051-7769',
         receiver: data.phone,
         msg: `📢 ${data.name}님 예약이 접수되었습니다.`,
-        template_code: 'TEMPLATE_CODE'
+        template_code: 'TZ_1545'
       }
     });
 
@@ -26,6 +26,7 @@ app.post('/', async (req, res) => {
     res.status(500).send('Error occurred.');
   }
 });
+
 const PORT = process.env.PORT || 3000;
 app.get('/', (req, res) => {
   res.send('✅ Aligo Proxy Server is running!');
