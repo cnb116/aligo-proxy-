@@ -26,8 +26,11 @@ app.post('/', async (req, res) => {
     res.status(500).send('Error occurred.');
   }
 });
-
 const PORT = process.env.PORT || 3000;
+app.get('/', (req, res) => {
+  res.send('✅ Aligo Proxy Server is running!');
+});
+
 app.listen(PORT, () => {
   console.log(`Proxy server running on port ${PORT}`);
 });
