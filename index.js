@@ -5,7 +5,7 @@ const axios = require('axios');
 const app = express();
 app.use(bodyParser.json());
 
-app.post('/', async (req, res) => {
+app.post('/send-kakao', async (req, res) => {
   try {
     const data = req.body;
 
